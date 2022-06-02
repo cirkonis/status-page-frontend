@@ -12,6 +12,7 @@ import { InfoIconComponent } from './icons/info-icon.component';
 import { WarningIconComponent } from './icons/warning-icon.component';
 import { ErrorIconComponent } from './icons/error-icon.component';
 import { AlertIconComponent } from './icons/alert-icon.component';
+import { TableCellIconComponent } from './status-page/status-table/table-cell-icon/table-cell-icon.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AlertIconComponent } from './icons/alert-icon.component';
     InfoIconComponent,
     WarningIconComponent,
     ErrorIconComponent,
-    AlertIconComponent
+    AlertIconComponent,
+    TableCellIconComponent
   ],
   imports: [
     BrowserModule
