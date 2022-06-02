@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `<app-status-page></app-status-page>`,
 })
 export class AppComponent {
-  title = 'status-page-frontend';
+  title = 'Status Page';
 }
