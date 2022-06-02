@@ -21,10 +21,10 @@
             </tr>
             </thead>
             <tbody class="bg-white">
-            <tr *ngFor="let number of numbers">
-              <td class="whitespace-nowrap border-b border-gray-200 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">Miek the Great</td>
-              <td class="whitespace-nowrap border-b border-gray-200 px-3 py-4 text-sm text-gray-500 hidden sm:table-cell">Front-end Developer</td>
-              <td class="whitespace-nowrap border-b border-gray-200 px-3 py-4 text-sm text-gray-500 hidden lg:table-cell">mike@mike</td>
+            <tr *ngFor="let sli of sli">
+              <td class="whitespace-nowrap border-b border-gray-200 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">{{sli.name}}</td>
+              <td class="whitespace-nowrap border-b border-gray-200 px-3 py-4 text-sm text-gray-500 hidden sm:table-cell">{{sli.nebulaStatus}}</td>
+              <td class="whitespace-nowrap border-b border-gray-200 px-3 py-4 text-sm text-gray-500 hidden lg:table-cell">{{sli.gcpStatus}}</td>
             </tr>
             </tbody>
           </table>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {IServiceLevelIndicator} from "../../../interfaces/IServiceLevelIndicator";
+import {ESliStatus} from "../../../enums/ESliStatus";
 
 @Component({
   selector: 'app-status-table',
@@ -6,7 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatusTableComponent implements OnInit {
 
-  numbers = [0,1,2,3,4,5,6,9,9,9,9]
+  sli: IServiceLevelIndicator[] = [
+    {
+      name: 'test',
+      nebulaStatus: ESliStatus.HEALTHY,
+      gcpStatus: ESliStatus.UNMONITORED,
+    },
+    {
+      name: 'API Server Latency (write)',
+      nebulaStatus: ESliStatus.HEALTHY,
+      gcpStatus: ESliStatus.UNMONITORED,
+    },
+    {
+      name: 'API Server Latency (read)',
+      nebulaStatus: ESliStatus.HEALTHY,
+      gcpStatus: ESliStatus.UNMONITORED,
+    },
+  ]
+
 
   constructor() { }
 
