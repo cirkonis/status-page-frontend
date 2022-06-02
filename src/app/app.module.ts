@@ -10,6 +10,8 @@ import { UnmonitoredIconComponent } from './icons/unmonitored-icon.component';
 import { HealthyIconComponent} from "./icons/healthy-icon.component";
 import { InfoIconComponent } from './icons/info-icon.component';
 import { WarningIconComponent } from './icons/warning-icon.component';
+import { ErrorIconComponent } from './icons/error-icon.component';
+import { AlertIconComponent } from './icons/alert-icon.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { WarningIconComponent } from './icons/warning-icon.component';
     UnmonitoredIconComponent,
     HealthyIconComponent,
     InfoIconComponent,
-    WarningIconComponent
+    WarningIconComponent,
+    ErrorIconComponent,
+    AlertIconComponent
   ],
   imports: [
     BrowserModule
