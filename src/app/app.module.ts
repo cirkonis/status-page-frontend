@@ -13,7 +13,7 @@ import { StatusTableComponent } from './status-page/status-table/status-table.co
     StatusPageComponent,
     HeaderComponent,
     FooterComponent,
-    StatusTableComponent
+    StatusTableComponent,
   ],
   imports: [
     BrowserModule
