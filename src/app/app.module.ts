@@ -13,6 +13,8 @@ import { WarningIconComponent } from './icons/warning-icon.component';
 import { ErrorIconComponent } from './icons/error-icon.component';
 import { AlertIconComponent } from './icons/alert-icon.component';
 import { TableCellIconComponent } from './status-page/status-table/table-cell-icon/table-cell-icon.component';
+import {HttpClientModule} from "@angular/common/http";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -27,10 +29,12 @@ import { TableCellIconComponent } from './status-page/status-table/table-cell-ic
     WarningIconComponent,
     ErrorIconComponent,
     AlertIconComponent,
-    TableCellIconComponent
+    TableCellIconComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

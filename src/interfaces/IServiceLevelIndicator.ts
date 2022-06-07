@@ -1,7 +1,8 @@
 import {ESliStatus} from "../enums/ESliStatus";
 
 export interface IServiceLevelIndicator {
-  name: string
+  id?: string,
+  name: string,
   nebulaStatus: ESliStatus,
   gcpStatus: ESliStatus
 }

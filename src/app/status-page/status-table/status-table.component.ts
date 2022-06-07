@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {IServiceLevelIndicator} from "../../../interfaces/IServiceLevelIndicator";
 import {ESliStatus} from "../../../enums/ESliStatus";
+import {GrafanaService} from "../../services/grafana.service";
+import {map} from "rxjs/operators";
+import {IAlert} from "../../../interfaces/IAlert";
 
 @Component({
   selector: 'app-status-table',
@@ -8,7 +11,11 @@ import {ESliStatus} from "../../../enums/ESliStatus";
 })
 export class StatusTableComponent implements OnInit {
 
-  sli: IServiceLevelIndicator[] = [
+  testData!: string;
+
+  fakeAlert!: IServiceLevelIndicator;
+
+  serviceLevelIndicators: IServiceLevelIndicator[] = [
     {
       name: 'Icon test 1',
       nebulaStatus: ESliStatus.HEALTHY,
@@ -25,7 +32,8 @@ export class StatusTableComponent implements OnInit {
       gcpStatus: ESliStatus.ERROR,
     },
     {
-      name: 'test',
+      id: 'fake',
+      name: 'fake service test',
       nebulaStatus: ESliStatus.UNMONITORED,
       gcpStatus: ESliStatus.UNMONITORED,
     },
@@ -42,9 +50,15 @@ export class StatusTableComponent implements OnInit {
   ]
 
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private grafanaService: GrafanaService) {
   }
 
+  ngOnInit(): void {
+    this.getAlertStatus('0-DLy2Unz');
+  }
+
+  getAlertStatus(id: string) {
+    let thing = this.grafanaService.getGrafanaAlertRules().pipe(map((response: any) => response.data.alerts.filter((alert: IAlert) => alert.annotations.__dashboardUid__ === id)));
+    thing.subscribe((alert: IAlert[]) => console.log(alert[0].state));
+  }
 }

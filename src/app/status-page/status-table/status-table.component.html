@@ -2,7 +2,7 @@
   <div class="sm:flex sm:items-center">
     <div class="sm:flex-auto">
       <h1 class="text-xl font-semibold text-gray-900">SLI's</h1>
-      <p class="mt-2 text-sm text-gray-700">A list of all the SLI</p>
+      <p class="mt-2 text-sm text-gray-700">Something Something Darkside</p>
     </div>
 <!--    <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">-->
 <!--      <button type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">Add user</button>-->
@@ -21,7 +21,7 @@
             </tr>
             </thead>
             <tbody class="bg-white">
-            <tr *ngFor="let sli of sli">
+            <tr *ngFor="let sli of serviceLevelIndicators">
               <td class="whitespace-nowrap border-b border-gray-200 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">{{sli.name}}</td>
               <td class="whitespace-nowrap border-b border-gray-200 px-3 py-4 text-sm text-gray-500 hidden sm:table-cell">
                 <app-table-cell-icon [sliStatus]="sli.nebulaStatus"></app-table-cell-icon>
@@ -37,3 +37,5 @@
     </div>
   </div>
 </div>
+
+<p>{{this.testData}}</p>
