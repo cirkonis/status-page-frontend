@@ -3,6 +3,6 @@ export enum ESliStatus {
   UNMONITORED = 'UNMONITORED',
   WARNING = 'WARNING',
   ERROR = 'ERROR',
-  ALERTING = 'ALERTING',
+  ALERTING = 'Alerting',
   INFO = 'INFO',
 }

@@ -15,6 +15,7 @@ import { AlertIconComponent } from './icons/alert-icon.component';
 import { TableCellIconComponent } from './status-page/status-table/table-cell-icon/table-cell-icon.component';
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
+import { StringToSliStatePipe } from './pipes/string-to-alert-state.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {CommonModule} from "@angular/common";
     ErrorIconComponent,
     AlertIconComponent,
     TableCellIconComponent,
+    StringToSliStatePipe,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
@@ -9,17 +9,18 @@ export class GrafanaService {
 
   URL = 'http://localhost:3000'
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
-  getGrafanaHome(): Observable<object>{
+  getGrafanaHome(): Observable<object> {
     return this.http.get(`${this.URL}/grafana/home`);
   }
 
-  getGrafanaApiServerDashboard(): Observable<object>{
+  getGrafanaApiServerDashboard(): Observable<object> {
     return this.http.get(`${this.URL}/grafana/api-server`)
   }
 
-  getGrafanaAlertRules(): Observable<object>{
+  getGrafanaAlertRules(): Observable<object> {
     return this.http.get(`${this.URL}/grafana/alert-rules`)
   }
 

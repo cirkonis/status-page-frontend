@@ -6,6 +6,6 @@ import {ESliStatus} from "../../../../enums/ESliStatus";
   templateUrl: './table-cell-icon.component.html',
 })
 export class TableCellIconComponent {
-  @Input() sliStatus!: ESliStatus
+  @Input() sliStatus!: string | null;
   sliStatuses = ESliStatus;
 }
