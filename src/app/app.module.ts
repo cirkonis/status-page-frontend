@@ -16,7 +16,9 @@ import { PendingIconComponent } from "./icons/pending-icon.component";
 import { TableCellIconComponent } from './status-page/sli-status-table/table-cell-icon/table-cell-icon.component';
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
-import { TooltipDirective } from './directives/tooltip.directive';
+import { TooltipDirective } from './directives/tooltip/tooltip.directive';
+import { OverlayModule } from "@angular/cdk/overlay";
+import { TooltipComponent } from './directives/tooltip/tooltip.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +36,13 @@ import { TooltipDirective } from './directives/tooltip.directive';
     PendingIconComponent,
     TableCellIconComponent,
     TooltipDirective,
+    TooltipComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     CommonModule,
+    OverlayModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
