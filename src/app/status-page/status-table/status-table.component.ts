@@ -44,7 +44,13 @@ export class StatusTableComponent implements OnInit {
       nebulaStatus: this.getAlertStatus('3e5ad63d-fda1-468a-b9aa-3b7e984b98ab'),
       gcpStatus: ESliStatus.UNMONITORED,
     },
+    {
+      name: 'Kubernetes API Server Availability',
+      nebulaStatus: this.getAlertStatus('371aa7ac-6133-4902-8cfc-59ea3af896d5'),
+      gcpStatus: ESliStatus.UNMONITORED,
+    },
   ]
+
 
 
   constructor(private grafanaService: GrafanaService) {
