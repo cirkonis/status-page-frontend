@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StatusTableComponent } from './status-table.component';
+import { SliStatusTableComponent } from './sli-status-table.component';
 
 describe('StatusTableComponent', () => {
-  let component: StatusTableComponent;
-  let fixture: ComponentFixture<StatusTableComponent>;
+  let component: SliStatusTableComponent;
+  let fixture: ComponentFixture<SliStatusTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatusTableComponent ]
+      declarations: [ SliStatusTableComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StatusTableComponent);
+    fixture = TestBed.createComponent(SliStatusTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

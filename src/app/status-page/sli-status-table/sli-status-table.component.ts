@@ -7,27 +7,12 @@ import {IAlert} from "../../../interfaces/IAlert";
 import {Observable} from "rxjs";
 
 @Component({
-  selector: 'app-status-table',
-  templateUrl: './status-table.component.html',
+  selector: 'app-sli-status-table',
+  templateUrl: './sli-status-table.component.html',
 })
-export class StatusTableComponent implements OnInit {
+export class SliStatusTableComponent implements OnInit {
 
   serviceLevelIndicators: IServiceLevelIndicator[] = [
-    {
-      name: 'Icon test 1',
-      // nebulaStatus: ESliStatus.PENDING,
-      gcpStatus: ESliStatus.NO_DATA,
-    },
-    {
-      name: 'Icon test 2',
-      // nebulaStatus: ESliStatus.INFO,
-      gcpStatus: ESliStatus.ALERTING,
-    },
-    {
-      name: 'Icon test 3',
-      // nebulaStatus: ESliStatus.UNMONITORED,
-      gcpStatus: ESliStatus.PENDING,
-    },
     {
       id: 'fake',
       name: 'fake service test',
@@ -38,11 +23,13 @@ export class StatusTableComponent implements OnInit {
       name: 'Kubernetes API Server Latency (write)',
       nebulaStatus: this.getAlertStatus('42819512-bad3-40fa-93aa-b9e896afc69a'),
       gcpStatus: ESliStatus.UNMONITORED,
+      tooltip: 'Latency of mutating API calls for single objects for every (resource, verb) pair, measured as 99th percentile over last 5 minutes'
     },
     {
       name: 'Kubernetes API Server Latency (read)',
       nebulaStatus: this.getAlertStatus('3e5ad63d-fda1-468a-b9aa-3b7e984b98ab'),
       gcpStatus: ESliStatus.UNMONITORED,
+      tooltip: 'Latency of non-streaming read-only API calls for every (resource, scope pair, measured as 99th percentile over last 5 minutes'
     },
     {
       name: 'Kubernetes API Server Availability',
