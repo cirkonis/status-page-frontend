@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'icon-warning',
+  selector: 'icon-no-data',
   template: `
     <div class="text-orange-500 hover:text-orange-500">
       <span class="sr-only">Warning</span>
@@ -11,4 +11,4 @@ import { Component } from '@angular/core';
     </div>
   `,
 })
-export class WarningIconComponent{}
+export class NoDataIconComponent {}

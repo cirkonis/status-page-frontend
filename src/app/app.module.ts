@@ -9,7 +9,7 @@ import { StatusTableComponent } from './status-page/sli-status-table/status-tabl
 import { UnmonitoredIconComponent } from './icons/unmonitored-icon.component';
 import { NormalIconComponent} from "./icons/normal-icon.component";
 import { InfoIconComponent } from './icons/info-icon.component';
-import { WarningIconComponent } from './icons/warning-icon.component';
+import { NoDataIconComponent } from './icons/no-data-icon.component';
 import { ErrorIconComponent } from './icons/error-icon.component';
 import { AlertIconComponent } from './icons/alert-icon.component';
 import { PendingIconComponent } from "./icons/pending-icon.component";
@@ -27,7 +27,7 @@ import {CommonModule} from "@angular/common";
     UnmonitoredIconComponent,
     NormalIconComponent,
     InfoIconComponent,
-    WarningIconComponent,
+    NoDataIconComponent,
     ErrorIconComponent,
     AlertIconComponent,
     PendingIconComponent,
