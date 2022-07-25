@@ -18,17 +18,18 @@ export class SliStatusTableComponent implements OnInit {
       name: 'fake service test',
       nebulaStatus: this.getAlertStatus('4066e417-9ad4-4967-b512-a744b301682e'),
       gcpStatus: ESliStatus.UNMONITORED,
-      tooltip: 'Tool tip test',
     },
     {
       name: 'Kubernetes API Server Latency (write)',
       nebulaStatus: this.getAlertStatus('42819512-bad3-40fa-93aa-b9e896afc69a'),
       gcpStatus: ESliStatus.UNMONITORED,
+      tooltip: 'Latency of mutating API calls for single objects for every (resource, verb) pair, measured as 99th percentile over last 5 minutes'
     },
     {
       name: 'Kubernetes API Server Latency (read)',
       nebulaStatus: this.getAlertStatus('3e5ad63d-fda1-468a-b9aa-3b7e984b98ab'),
       gcpStatus: ESliStatus.UNMONITORED,
+      tooltip: 'Latency of non-streaming read-only API calls for every (resource, scope pair, measured as 99th percentile over last 5 minutes'
     },
     {
       name: 'Kubernetes API Server Availability',
