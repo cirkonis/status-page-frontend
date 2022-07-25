@@ -10,5 +10,5 @@ import {Component} from '@angular/core';
     </svg>
   </div>`,
 })
-export class HealthyIconComponent {
+export class NormalIconComponent {
 }

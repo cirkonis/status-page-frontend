@@ -1,7 +1,9 @@
 import {ESliStatus} from "../enums/ESliStatus";
+import {Observable} from "rxjs";
 
 export interface IServiceLevelIndicator {
-  name: string
-  nebulaStatus: ESliStatus,
+  id?: string,
+  name: string,
+  nebulaStatus?: Observable<string>,
   gcpStatus: ESliStatus
 }
