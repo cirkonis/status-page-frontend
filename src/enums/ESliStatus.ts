@@ -1,5 +1,5 @@
 export enum ESliStatus {
-  HEALTHY ='HEALTHY',
+  NORMAL ='Normal',
   UNMONITORED = 'UNMONITORED',
   WARNING = 'WARNING',
   ERROR = 'ERROR',
