@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { StatusPageComponent } from './status-page/status-page.component';
 import { HeaderComponent } from './status-page/header/header.component';
 import { FooterComponent } from './status-page/footer/footer.component';
-import { StatusTableComponent } from './status-page/sli-status-table/status-table.component';
+import { SliStatusTableComponent } from './status-page/sli-status-table/sli-status-table.component';
 import { UnmonitoredIconComponent } from './icons/unmonitored-icon.component';
 import { NormalIconComponent} from "./icons/normal-icon.component";
 import { InfoIconComponent } from './icons/info-icon.component';
@@ -23,7 +23,7 @@ import {CommonModule} from "@angular/common";
     StatusPageComponent,
     HeaderComponent,
     FooterComponent,
-    StatusTableComponent,
+    SliStatusTableComponent,
     UnmonitoredIconComponent,
     NormalIconComponent,
     InfoIconComponent,

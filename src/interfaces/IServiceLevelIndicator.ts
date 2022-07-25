@@ -5,5 +5,6 @@ export interface IServiceLevelIndicator {
   id?: string,
   name: string,
   nebulaStatus?: Observable<string>,
-  gcpStatus: ESliStatus
+  gcpStatus: ESliStatus,
+  tooltip?: string
 }

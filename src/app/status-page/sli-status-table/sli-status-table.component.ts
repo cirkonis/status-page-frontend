@@ -7,32 +7,18 @@ import {IAlert} from "../../../interfaces/IAlert";
 import {Observable} from "rxjs";
 
 @Component({
-  selector: 'app-status-table',
-  templateUrl: './status-table.component.html',
+  selector: 'app-sli-status-table',
+  templateUrl: './sli-status-table.component.html',
 })
-export class StatusTableComponent implements OnInit {
+export class SliStatusTableComponent implements OnInit {
 
   serviceLevelIndicators: IServiceLevelIndicator[] = [
-    {
-      name: 'Icon test 1',
-      // nebulaStatus: ESliStatus.PENDING,
-      gcpStatus: ESliStatus.NO_DATA,
-    },
-    {
-      name: 'Icon test 2',
-      // nebulaStatus: ESliStatus.INFO,
-      gcpStatus: ESliStatus.ALERTING,
-    },
-    {
-      name: 'Icon test 3',
-      // nebulaStatus: ESliStatus.UNMONITORED,
-      gcpStatus: ESliStatus.PENDING,
-    },
     {
       id: 'fake',
       name: 'fake service test',
       nebulaStatus: this.getAlertStatus('4066e417-9ad4-4967-b512-a744b301682e'),
       gcpStatus: ESliStatus.UNMONITORED,
+      tooltip: 'Tool tip test',
     },
     {
       name: 'Kubernetes API Server Latency (write)',
