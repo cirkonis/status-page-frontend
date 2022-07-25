@@ -15,8 +15,8 @@ export class StatusTableComponent implements OnInit {
   serviceLevelIndicators: IServiceLevelIndicator[] = [
     {
       name: 'Icon test 1',
-      // nebulaStatus: ESliStatus.HEALTHY,
-      gcpStatus: ESliStatus.WARNING,
+      // nebulaStatus: ESliStatus.PENDING,
+      gcpStatus: ESliStatus.NO_DATA,
     },
     {
       name: 'Icon test 2',
@@ -26,7 +26,7 @@ export class StatusTableComponent implements OnInit {
     {
       name: 'Icon test 3',
       // nebulaStatus: ESliStatus.UNMONITORED,
-      gcpStatus: ESliStatus.ERROR,
+      gcpStatus: ESliStatus.PENDING,
     },
     {
       id: 'fake',
@@ -40,8 +40,8 @@ export class StatusTableComponent implements OnInit {
       gcpStatus: ESliStatus.UNMONITORED,
     },
     {
-      name: 'API Server Latency (read)',
-      // nebulaStatus: ESliStatus.UNMONITORED,
+      name: 'Kubernetes API Server Latency (read)',
+      nebulaStatus: this.getAlertStatus('3e5ad63d-fda1-468a-b9aa-3b7e984b98ab'),
       gcpStatus: ESliStatus.UNMONITORED,
     },
   ]

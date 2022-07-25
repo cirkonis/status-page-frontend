@@ -12,6 +12,7 @@ import { InfoIconComponent } from './icons/info-icon.component';
 import { WarningIconComponent } from './icons/warning-icon.component';
 import { ErrorIconComponent } from './icons/error-icon.component';
 import { AlertIconComponent } from './icons/alert-icon.component';
+import { PendingIconComponent } from "./icons/pending-icon.component";
 import { TableCellIconComponent } from './status-page/status-table/table-cell-icon/table-cell-icon.component';
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
@@ -29,6 +30,7 @@ import {CommonModule} from "@angular/common";
     WarningIconComponent,
     ErrorIconComponent,
     AlertIconComponent,
+    PendingIconComponent,
     TableCellIconComponent,
   ],
   imports: [
