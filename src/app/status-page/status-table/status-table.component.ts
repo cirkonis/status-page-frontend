@@ -31,12 +31,12 @@ export class StatusTableComponent implements OnInit {
     {
       id: 'fake',
       name: 'fake service test',
-      nebulaStatus: this.getAlertStatus('0-DLy2Unz'),
+      nebulaStatus: this.getAlertStatus('4066e417-9ad4-4967-b512-a744b301682e'),
       gcpStatus: ESliStatus.UNMONITORED,
     },
     {
-      name: 'API Server Latency (write)',
-      // nebulaStatus: ESliStatus.UNMONITORED,
+      name: 'Kubernetes API Server Latency (write)',
+      nebulaStatus: this.getAlertStatus('42819512-bad3-40fa-93aa-b9e896afc69a'),
       gcpStatus: ESliStatus.UNMONITORED,
     },
     {
@@ -56,6 +56,6 @@ export class StatusTableComponent implements OnInit {
   getAlertStatus(id: string): Observable<string> {
     return this.grafanaService.getGrafanaAlertRules()
       .pipe(map((response: any) => response.data.alerts
-        .filter((alert: IAlert) => alert.annotations.__dashboardUid__ === id).map((alert: IAlert) => alert.state)));
+        .filter((alert: IAlert) => alert.annotations.__alertId__ === id).map((alert: IAlert) => alert.state)));
   }
 }
